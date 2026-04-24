@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
-import { AuthContext } from '../App';
+import { AuthContext } from './App';
 import { useNavigate } from 'react-router-dom';
 import API from '../services/api';
 
 export default function Login() {
   const [username, setUsername] = useState('admin');
-  const [password, setPassword] = useState('password123');
+  const [password, setPassword] = useState('Aviation@2026');
   const [error, setError] = useState('');
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -13,13 +13,6 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      // Mocking auto-register for demo purposes so it always works
-      try {
-        await API.post('/auth/register', { username, password, role: 'admin' });
-      } catch (err) {
-        // Ignore register error (user probably exists)
-      }
-
       const res = await API.post('/auth/login', { username, password });
       login(res.data);
       

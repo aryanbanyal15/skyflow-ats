@@ -71,8 +71,6 @@ res.status(201).json({
     : 'Slot successfully allocated.'
 });
 
-res.status(201).json(slot);
-
 }catch(err){
 res.status(500).json({message:err.message});
 }
