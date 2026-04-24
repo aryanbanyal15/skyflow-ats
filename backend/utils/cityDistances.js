@@ -1,0 +1,10 @@
+module.exports={
+"Delhi-Mumbai":1400,
+"Delhi-Bangalore":1740,
+"Delhi-Chennai":1760,
+"Mumbai-Bangalore":980,
+"Mumbai-Chennai":1030,
+"Bangalore-Chennai":350,
+"Delhi-Kolkata":1530,
+"Mumbai-Kolkata":1650
+};
